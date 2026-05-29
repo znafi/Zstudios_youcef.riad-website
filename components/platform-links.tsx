@@ -55,36 +55,49 @@ const platforms = [
     handle: 'Youcef Riad',
     href: 'https://open.spotify.com',
     Icon: SpotifyIcon,
+    tileBg: '#ffffff',
+    glyph: '#1DB954',
   },
   {
     name: 'YouTube',
     handle: '@youcefriad',
     href: 'https://youtube.com',
     Icon: YouTubeIcon,
+    tileBg: '#ffffff',
+    glyph: '#FF0000',
   },
   {
     name: 'Apple Music',
     handle: 'Youcef Riad',
     href: 'https://music.apple.com',
     Icon: AppleIcon,
+    tileBg: 'linear-gradient(135deg, #FA233B, #FB5C74)',
+    glyph: '#ffffff',
   },
   {
     name: 'Instagram',
     handle: '@youcefriad',
     href: 'https://instagram.com',
     Icon: InstagramIcon,
+    tileBg:
+      'linear-gradient(45deg, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5)',
+    glyph: '#ffffff',
   },
   {
     name: 'TikTok',
     handle: '@youcefriad',
     href: 'https://tiktok.com',
     Icon: TikTokIcon,
+    tileBg: '#010101',
+    glyph: '#ffffff',
   },
   {
     name: 'SoundCloud',
     handle: 'Youcef Riad',
     href: 'https://soundcloud.com',
     Icon: SoundCloudIcon,
+    tileBg: 'linear-gradient(135deg, #FF5500, #FF8800)',
+    glyph: '#ffffff',
   },
 ]
 
@@ -112,8 +125,11 @@ export function PlatformLinks() {
               rel="noreferrer"
               className="group flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:border-primary"
             >
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-secondary text-foreground transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <p.Icon className="size-6" />
+              <span
+                className="flex size-12 shrink-0 items-center justify-center rounded-xl shadow-sm ring-1 ring-black/10 transition-transform group-hover:scale-105"
+                style={{ background: p.tileBg }}
+              >
+                <p.Icon className="size-6" style={{ color: p.glyph }} />
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block text-base font-semibold text-foreground">
