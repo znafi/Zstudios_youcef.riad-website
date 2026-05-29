@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-import { Play, ArrowDown } from 'lucide-react'
+import { ArrowDown } from 'lucide-react'
+import { VinylPlayer } from '@/components/vinyl-player'
 
 export function Hero() {
   const [offset, setOffset] = useState(0)
@@ -64,22 +65,8 @@ export function Hero() {
             zellige — colorful, intricate, and impossible to forget.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="https://open.spotify.com"
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:scale-105 hover:shadow-[0_0_30px_-4px_var(--color-primary)] active:scale-95"
-            >
-              <Play className="size-4 fill-current" />
-              Play on Spotify
-            </a>
-            <a
-              href="#listen"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              Explore
-            </a>
+          <div className="mt-8">
+            <VinylPlayer />
           </div>
         </div>
 
