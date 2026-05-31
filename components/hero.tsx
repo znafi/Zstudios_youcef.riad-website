@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { ArrowDown } from 'lucide-react'
 import { VinylPlayer } from '@/components/vinyl-player'
+import { SocialIcons } from '@/components/social-icons'
 
 export function Hero() {
   const [offset, setOffset] = useState(0)
@@ -54,7 +55,9 @@ export function Hero() {
             New single out now
           </span>
 
-          <h1 className="mt-6 text-balance text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+          <SocialIcons />
+
+          <h1 className="mt-4 text-balance text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
             Youcef
             <br />
             <span className="text-display italic text-primary">Riad</span>

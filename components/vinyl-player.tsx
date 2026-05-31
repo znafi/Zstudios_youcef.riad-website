@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { Play, Pause } from 'lucide-react'
 
@@ -139,44 +140,26 @@ export function VinylPlayer() {
           style={{ background: 'var(--color-primary)' }}
         />
 
-        {/* the record */}
+        {/* the record - circular artist photo */}
         <span
-          className="relative grid size-28 place-items-center rounded-full shadow-2xl ring-1 ring-white/10 sm:size-32"
+          className="relative grid size-28 place-items-center overflow-hidden rounded-full shadow-2xl ring-2 ring-primary/50 sm:size-32"
           style={{
-            background:
-              'repeating-radial-gradient(circle at center, #111 0px, #111 3px, #1c1c1c 4px, #111 5px)',
-            animation: playing
-              ? 'spin-slow 4s linear infinite'
-              : 'none',
+            animation: playing ? 'spin-slow 4s linear infinite' : 'none',
           }}
         >
-          {/* glossy sheen */}
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 rounded-full"
-            style={{
-              background:
-                'conic-gradient(from 210deg, rgba(255,255,255,0.16), transparent 80deg, rgba(255,255,255,0.06) 200deg, transparent 320deg)',
-            }}
+          <Image
+            src="/youcef-logo.png"
+            alt="Play demo track"
+            fill
+            className="object-cover"
           />
-          {/* center label = zellige */}
-          <span
-            className="relative grid size-12 place-items-center overflow-hidden rounded-full ring-2 ring-black sm:size-14"
-            style={{
-              backgroundImage: 'url(/moroccan-zellige.jpeg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
-            <span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground shadow sm:size-8">
-              {playing ? (
-                <Pause className="size-3.5 fill-current sm:size-4" />
-              ) : (
-                <Play className="size-3.5 translate-x-px fill-current sm:size-4" />
-              )}
-            </span>
-            {/* spindle hole */}
-            <span className="absolute size-1.5 rounded-full bg-black ring-1 ring-white/20" />
+          {/* center play/pause button */}
+          <span className="absolute grid size-10 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg sm:size-12">
+            {playing ? (
+              <Pause className="size-4 fill-current sm:size-5" />
+            ) : (
+              <Play className="size-4 translate-x-0.5 fill-current sm:size-5" />
+            )}
           </span>
         </span>
       </button>
