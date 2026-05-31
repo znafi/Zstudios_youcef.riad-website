@@ -6,9 +6,10 @@ import { Play, Pause } from 'lucide-react'
 import { Reveal } from './reveal'
 
 const tracks = [
-  { title: 'Bini W Binik', length: '3:12', plays: '2,481,902' },
-  { title: 'Hed Lila', length: '2:54', plays: '1,204,338' },
-  { title: 'Sarab', length: '3:41', plays: '987,540' },
+  { title: 'BINI W BINK', length: '3:12', plays: '2,481,902' },
+  { title: 'Zellige', length: '2:54', plays: '1,204,338' },
+  { title: 'Atlas Nights', length: '3:41', plays: '987,540' },
+  { title: 'Casa Lights', length: '3:05', plays: '764,221' },
 ]
 
 export function FeaturedRelease() {
@@ -57,7 +58,7 @@ export function FeaturedRelease() {
             The new chapter
           </h2>
           <p className="mt-3 max-w-md text-pretty text-muted-foreground">
-            Three tracks blending North African melody with contemporary
+            Four tracks blending North African melody with contemporary
             production. Stream the full EP on your favorite platform.
           </p>
 
