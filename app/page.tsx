@@ -5,7 +5,6 @@ import { Hero } from '@/components/hero'
 import { MarqueeBand } from '@/components/marquee-band'
 import { ZelligeInstrument } from '@/components/zellige-instrument'
 import { FeaturedRelease } from '@/components/featured-release'
-import { PlatformLinks } from '@/components/platform-links'
 import { SiteFooter } from '@/components/site-footer'
 
 export default function Page() {
@@ -18,7 +17,6 @@ export default function Page() {
       <MarqueeBand />
       <ZelligeInstrument />
       <FeaturedRelease />
-      <PlatformLinks />
       <SiteFooter />
     </main>
   )

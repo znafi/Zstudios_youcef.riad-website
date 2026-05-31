@@ -59,15 +59,10 @@ export function SocialIcons() {
           target="_blank"
           rel="noreferrer"
           aria-label={s.name}
-          className="flex size-9 items-center justify-center rounded-full bg-secondary text-muted-foreground transition-all hover:scale-110 hover:text-foreground"
-          style={{ '--hover-color': s.color } as React.CSSProperties}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = s.color
-            e.currentTarget.style.color = s.name === 'TikTok' ? '#010101' : '#ffffff'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = ''
-            e.currentTarget.style.color = ''
+          className="flex size-9 items-center justify-center rounded-full transition-transform hover:scale-110"
+          style={{
+            backgroundColor: s.color,
+            color: s.name === 'TikTok' ? '#010101' : '#ffffff',
           }}
         >
           <s.Icon className="size-4" />

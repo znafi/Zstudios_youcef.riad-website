@@ -140,9 +140,9 @@ export function VinylPlayer() {
           style={{ background: 'var(--color-primary)' }}
         />
 
-        {/* the record - circular artist photo */}
+        {/* the record - full artist photo */}
         <span
-          className="relative grid size-28 place-items-center overflow-hidden rounded-full shadow-2xl ring-2 ring-primary/50 sm:size-32"
+          className="relative grid size-28 place-items-center overflow-hidden rounded-full shadow-2xl ring-2 ring-primary/60 sm:size-32"
           style={{
             animation: playing ? 'spin-slow 4s linear infinite' : 'none',
           }}

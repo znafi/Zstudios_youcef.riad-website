@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 const links = [
@@ -31,15 +30,9 @@ export function SiteNav() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a
           href="#top"
-          className="flex items-center"
+          className="text-display text-lg font-bold tracking-tight text-foreground"
         >
-          <Image
-            src="/youcef-logo.png"
-            alt="Youcef Riad"
-            width={44}
-            height={44}
-            className="rounded-full"
-          />
+          Youcef<span className="text-primary">.</span>Riad
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
