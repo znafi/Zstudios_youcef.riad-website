@@ -109,10 +109,10 @@ export function PlatformLinks() {
     >
       <Reveal className="mb-12 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-          Listen everywhere
+          Stream & follow
         </p>
         <h2 className="mx-auto mt-3 max-w-2xl text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Find Youcef on every platform
+          Find me where you listen
         </h2>
       </Reveal>
 

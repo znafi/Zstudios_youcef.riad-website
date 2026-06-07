@@ -26,17 +26,17 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-16"
     >
-      {/* Zellige texture backdrop */}
+      {/* Disc backdrop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-24 h-[520px] w-[520px] opacity-[0.14] animate-spin-slow"
+        className="pointer-events-none absolute -right-32 -top-24 h-[520px] w-[520px] opacity-[0.18] animate-spin-slow"
         style={{ transform: `translateY(${offset * 0.15}px)` }}
       >
         <Image
-          src="/moroccan-zellige.jpeg"
+          src="/bini-w-bink-disc.png"
           alt=""
           fill
-          className="rounded-full object-cover"
+          className="rounded-full object-cover object-top"
           priority
         />
       </div>
@@ -61,8 +61,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
-            Moroccan rhythm meets modern sound. Bold melodies woven like
-            zellige — colorful, intricate, and impossible to forget.
+            From Casablanca with something to say. BINI W BINK is the new
+            single — out now everywhere.
           </p>
 
           <div className="mt-8">

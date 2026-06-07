@@ -52,14 +52,14 @@ export function FeaturedRelease() {
 
         <Reveal delay={120}>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            Featured release
+            Out now
           </p>
           <h2 className="mt-3 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-            The new chapter
+            BINI W BINK EP
           </h2>
           <p className="mt-3 max-w-md text-pretty text-muted-foreground">
-            Four tracks blending North African melody with contemporary
-            production. Stream the full EP on your favorite platform.
+            Four tracks, each one something I needed to get out. No filler.
+            Stream it wherever you listen.
           </p>
 
           <ul className="mt-8 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-card">

@@ -114,15 +114,14 @@ export function ZelligeInstrument() {
       <Reveal className="mb-10 flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-            Exclusive · interactive
+            Interactive
           </p>
           <h2 className="mt-3 text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             Play the <span className="text-display italic">Zellige</span>
           </h2>
           <p className="mt-3 max-w-md text-pretty text-muted-foreground">
-            Each tile of this Moroccan mosaic is a note. Tap, drag, or hit play
-            to compose your own riff — inspired by the colors of Youcef&apos;s
-            world.
+            The zellige is something I grew up around. Each tile is a note —
+            tap around, drag across, or just hit play and see what comes out.
           </p>
         </div>
 

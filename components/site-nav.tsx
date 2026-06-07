@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const links = [
   { label: 'Listen', href: '#listen' },
@@ -28,11 +29,15 @@ export function SiteNav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a
-          href="#top"
-          className="text-display text-lg font-bold tracking-tight text-foreground"
-        >
-          Youcef<span className="text-primary">.</span>Riad
+        <a href="#top" className="shrink-0">
+          <Image
+            src="/youcef-logo.png"
+            alt="Youcef Riad"
+            width={48}
+            height={48}
+            className="rounded-full object-cover"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

@@ -159,13 +159,13 @@ export function VinylPlayer() {
                 'conic-gradient(from 210deg, rgba(255,255,255,0.16), transparent 80deg, rgba(255,255,255,0.06) 200deg, transparent 320deg)',
             }}
           />
-          {/* center label = zellige */}
+          {/* center label */}
           <span
             className="relative grid size-12 place-items-center overflow-hidden rounded-full ring-2 ring-black sm:size-14"
             style={{
-              backgroundImage: 'url(/moroccan-zellige.jpeg)',
+              backgroundImage: 'url(/bini-w-bink-disc.png)',
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center top',
             }}
           >
             <span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground shadow sm:size-8">
@@ -188,11 +188,11 @@ export function VinylPlayer() {
         <p className="text-display text-lg font-bold text-foreground">
           BINI W BINK
         </p>
-        <a
-          href="#listen"
+          <a
+          href="#release"
           className="mt-1 inline-block text-xs font-semibold text-primary transition-colors hover:underline"
         >
-          Explore the music →
+          Full EP below →
         </a>
       </div>
     </div>
