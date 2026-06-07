@@ -7,9 +7,8 @@ import { Reveal } from './reveal'
 
 const tracks = [
   { title: 'BINI W BINK', length: '3:12', plays: '2,481,902' },
-  { title: 'Zellige', length: '2:54', plays: '1,204,338' },
-  { title: 'Atlas Nights', length: '3:41', plays: '987,540' },
-  { title: 'Casa Lights', length: '3:05', plays: '764,221' },
+  { title: 'HED LILA', length: '3:27', plays: '1,204,338' },
+  { title: 'SARAB', length: '3:54', plays: '987,540' },
 ]
 
 export function FeaturedRelease() {
@@ -58,7 +57,7 @@ export function FeaturedRelease() {
             BINI W BINK EP
           </h2>
           <p className="mt-3 max-w-md text-pretty text-muted-foreground">
-            Four tracks, each one something I needed to get out. No filler.
+            Three tracks, each one something I needed to get out. No filler.
             Stream it wherever you listen.
           </p>
 
