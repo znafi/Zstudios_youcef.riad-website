@@ -66,17 +66,17 @@ export function Hero() {
       id="top"
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-16"
     >
-      {/* Disc backdrop */}
+      {/* Zellige texture backdrop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 -top-24 h-[520px] w-[520px] opacity-[0.18] animate-spin-slow"
+        className="pointer-events-none absolute -right-32 -top-24 h-[520px] w-[520px] opacity-[0.14] animate-spin-slow"
         style={{ transform: `translateY(${offset * 0.15}px)` }}
       >
         <Image
-          src="/bini-w-bink-disc.png"
+          src="/moroccan-zellige.jpeg"
           alt=""
           fill
-          className="rounded-full object-cover object-top"
+          className="rounded-full object-cover"
           priority
         />
       </div>
@@ -123,6 +123,35 @@ export function Hero() {
           <div className="mt-8">
             <VinylPlayer />
           </div>
+
+          {/* Moroccan Sounds playlist card */}
+          <a
+            href="https://open.spotify.com/playlist/3r3kspYczu88uqll80Lvlo?si=Q9Xl0EoVTtCMiljDSyH4YQ&pi=zRGzs8YQTniLC&nd=1&dlsi=bd4cde9830a74593"
+            target="_blank"
+            rel="noreferrer"
+            className="group mt-6 flex items-center gap-4 rounded-2xl border border-border bg-card/60 p-3 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+          >
+            <div className="relative size-14 shrink-0 overflow-hidden rounded-xl">
+              <Image
+                src="/moroccan-sounds-playlist.png"
+                alt="Moroccan Sounds Spotify playlist"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
+                Spotify Playlist
+              </p>
+              <p className="mt-0.5 truncate text-sm font-bold text-foreground">
+                MOROCCAN SOUNDS
+              </p>
+              <p className="truncate text-xs text-muted-foreground">
+                Curated by Youcef Riad
+              </p>
+            </div>
+            <SpotifyIcon className="size-6 shrink-0 text-primary opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
+          </a>
         </div>
 
         {/* Artist photo */}
