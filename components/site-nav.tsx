@@ -30,14 +30,15 @@ export function SiteNav() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <a href="#top" className="shrink-0">
-          <Image
-            src="/youcef-logo.png"
-            alt="Youcef Riad"
-            width={48}
-            height={48}
-            className="rounded-full object-cover"
-            priority
-          />
+          <div className="relative size-12 overflow-hidden rounded-full">
+            <Image
+              src="/youcef-logo.png"
+              alt="Youcef Riad"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">

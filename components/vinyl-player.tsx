@@ -141,42 +141,30 @@ export function VinylPlayer() {
 
         {/* the record */}
         <span
-          className="relative grid size-28 place-items-center rounded-full shadow-2xl ring-1 ring-white/10 sm:size-32"
+          className="relative grid size-28 place-items-center overflow-hidden rounded-full shadow-2xl ring-1 ring-white/10 sm:size-32"
           style={{
-            background:
-              'repeating-radial-gradient(circle at center, #111 0px, #111 3px, #1c1c1c 4px, #111 5px)',
-            animation: playing
-              ? 'spin-slow 4s linear infinite'
-              : 'none',
+            backgroundImage: 'url(/bini-w-bink-disc.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center top',
+            animation: playing ? 'spin-slow 4s linear infinite' : 'none',
           }}
         >
-          {/* glossy sheen */}
+          {/* glossy sheen overlay */}
           <span
             aria-hidden="true"
             className="absolute inset-0 rounded-full"
             style={{
               background:
-                'conic-gradient(from 210deg, rgba(255,255,255,0.16), transparent 80deg, rgba(255,255,255,0.06) 200deg, transparent 320deg)',
+                'conic-gradient(from 210deg, rgba(255,255,255,0.14), transparent 80deg, rgba(255,255,255,0.05) 200deg, transparent 320deg)',
             }}
           />
-          {/* center label */}
-          <span
-            className="relative grid size-12 place-items-center overflow-hidden rounded-full ring-2 ring-black sm:size-14"
-            style={{
-              backgroundImage: 'url(/bini-w-bink-disc.png)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center top',
-            }}
-          >
-            <span className="grid size-7 place-items-center rounded-full bg-primary text-primary-foreground shadow sm:size-8">
-              {playing ? (
-                <Pause className="size-3.5 fill-current sm:size-4" />
-              ) : (
-                <Play className="size-3.5 translate-x-px fill-current sm:size-4" />
-              )}
-            </span>
-            {/* spindle hole */}
-            <span className="absolute size-1.5 rounded-full bg-black ring-1 ring-white/20" />
+          {/* play/pause button */}
+          <span className="relative grid size-10 place-items-center rounded-full bg-primary text-primary-foreground shadow-lg sm:size-11">
+            {playing ? (
+              <Pause className="size-4 fill-current sm:size-5" />
+            ) : (
+              <Play className="size-4 translate-x-px fill-current sm:size-5" />
+            )}
           </span>
         </span>
       </button>
