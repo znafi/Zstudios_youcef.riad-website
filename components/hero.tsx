@@ -98,7 +98,16 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 md:grid-cols-2 md:gap-8">
         {/* Copy */}
         <div className="order-2 md:order-1">
-          <div className="mt-2 flex items-center gap-4">
+          <div className="mt-2 flex items-center gap-3">
+            {/* "Stream now" CTA — arrow points left toward the icons */}
+            <span className="flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
+              Stream now
+              {/* left-pointing arrow that bounces toward the icons */}
+              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3 animate-bounce-x-left" aria-hidden="true" style={{transform:'scaleX(-1)'}}>
+                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
+              </svg>
+            </span>
+
             <div className="flex items-center gap-4">
               {socialLinks.map(({ label, href, Icon, color }) => (
                 <a
@@ -114,12 +123,6 @@ export function Hero() {
                 </a>
               ))}
             </div>
-            <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">
-              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 animate-bounce-x" aria-hidden="true">
-                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
-              </svg>
-              stream
-            </span>
           </div>
 
           <h1 className="mt-4 text-balance text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
