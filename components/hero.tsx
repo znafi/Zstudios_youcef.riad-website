@@ -39,10 +39,10 @@ function InstagramIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const socialLinks = [
-  { label: 'Spotify', href: 'https://open.spotify.com', Icon: SpotifyIcon },
-  { label: 'TikTok', href: 'https://tiktok.com', Icon: TikTokIcon },
-  { label: 'Apple Music', href: 'https://music.apple.com', Icon: AppleIcon },
-  { label: 'Instagram', href: 'https://instagram.com', Icon: InstagramIcon },
+  { label: 'Spotify', href: 'https://open.spotify.com/artist/3UM4e9azTn49QwCW9xYBsV?utm_medium=share&utm_source=linktree', Icon: SpotifyIcon },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@youcef_riad.off', Icon: TikTokIcon },
+  { label: 'Apple Music', href: 'https://music.apple.com/us/artist/youcef-riad/1531264621', Icon: AppleIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/youcef_riad.off', Icon: InstagramIcon },
 ]
 
 export function Hero() {
