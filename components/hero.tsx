@@ -38,11 +38,20 @@ function InstagramIcon(props: SVGProps<SVGSVGElement>) {
   )
 }
 
+function YouTubeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z" />
+    </svg>
+  )
+}
+
 const socialLinks = [
   { label: 'Spotify', href: 'https://open.spotify.com/artist/3UM4e9azTn49QwCW9xYBsV?utm_medium=share&utm_source=linktree', Icon: SpotifyIcon, color: '#1DB954' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@youcef_riad.off', Icon: TikTokIcon, color: '#ffffff' },
   { label: 'Apple Music', href: 'https://music.apple.com/us/artist/youcef-riad/1531264621', Icon: AppleIcon, color: '#fc3c44' },
   { label: 'Instagram', href: 'https://www.instagram.com/youcef_riad.off', Icon: InstagramIcon, color: '#E1306C' },
+  { label: 'YouTube', href: 'https://youtube.com/@youcefriad', Icon: YouTubeIcon, color: '#FF0000' },
 ]
 
 export function Hero() {
@@ -89,13 +98,7 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 md:grid-cols-2 md:gap-8">
         {/* Copy */}
         <div className="order-2 md:order-1">
-          <div className="mt-2 flex items-center gap-3">
-            <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">
-              Stream now
-              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 animate-bounce-x" aria-hidden="true">
-                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
-              </svg>
-            </span>
+          <div className="mt-2 flex items-center gap-4">
             <div className="flex items-center gap-4">
               {socialLinks.map(({ label, href, Icon, color }) => (
                 <a
@@ -111,6 +114,12 @@ export function Hero() {
                 </a>
               ))}
             </div>
+            <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">
+              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 animate-bounce-x" aria-hidden="true">
+                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
+              </svg>
+              stream
+            </span>
           </div>
 
           <h1 className="mt-4 text-balance text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
@@ -120,7 +129,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground">
-            From Casablanca with something to say. BINI W BINK is the new
+            From Rabat with something to say. BINI W BINK is the new
             single — out now everywhere.
           </p>
 
