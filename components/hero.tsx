@@ -115,10 +115,10 @@ export function Hero() {
               ))}
             </div>
             <span className="flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-primary">
-              stream
+              Stream now
               {/* left-pointing arrow */}
-              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 rotate-180 animate-bounce-x" aria-hidden="true">
-                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
+              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 animate-bounce-left" aria-hidden="true">
+                <path d="M13 8H4.414l3.293-3.293a1 1 0 0 0-1.414-1.414l-4 4a1 1 0 0 0 0 1.414l4 4a1 1 0 0 0 1.414-1.414L4.414 9H13a1 1 0 0 0 0-2z"/>
               </svg>
             </span>
           </div>

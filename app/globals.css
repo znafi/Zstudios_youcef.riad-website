@@ -148,12 +148,12 @@
 }
 
 /* ---- Bounce horizontal ---- */
-@keyframes bounce-x {
-  0%, 100% { transform: rotate(180deg) translateX(0); }
-  50% { transform: rotate(180deg) translateX(4px); }
+@keyframes bounce-left {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
 }
-.animate-bounce-x {
-  animation: bounce-x 0.9s ease-in-out infinite;
+.animate-bounce-left {
+  animation: bounce-left 0.9s ease-in-out infinite;
 }
 
 /* ---- Marquee ---- */
