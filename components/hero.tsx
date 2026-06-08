@@ -89,12 +89,7 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 md:grid-cols-2 md:gap-8">
         {/* Copy */}
         <div className="order-2 md:order-1">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
-            New single out now
-          </span>
-
-          <div className="mt-6 flex items-center gap-5">
+          <div className="mt-2 flex items-center gap-5">
             {socialLinks.map(({ label, href, Icon }) => (
               <a
                 key={label}

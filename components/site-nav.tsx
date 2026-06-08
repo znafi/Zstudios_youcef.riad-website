@@ -54,7 +54,9 @@ export function SiteNav() {
         </div>
 
         <a
-          href="#connect"
+          href="https://open.spotify.com/artist/3UM4e9azTn49QwCW9xYBsV?utm_medium=share&utm_source=linktree"
+          target="_blank"
+          rel="noreferrer"
           className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105 active:scale-95"
         >
           Follow
