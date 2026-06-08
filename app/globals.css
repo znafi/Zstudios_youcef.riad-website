@@ -149,20 +149,11 @@
 
 /* ---- Bounce horizontal ---- */
 @keyframes bounce-x {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(4px); }
+  0%, 100% { transform: rotate(180deg) translateX(0); }
+  50% { transform: rotate(180deg) translateX(4px); }
 }
 .animate-bounce-x {
-  animation: bounce-x 1s ease-in-out infinite;
-}
-
-/* arrow points left (scaleX(-1) on the SVG), bounces toward icons */
-@keyframes bounce-x-left {
-  0%, 100% { transform: scaleX(-1) translateX(0); }
-  50% { transform: scaleX(-1) translateX(4px); }
-}
-.animate-bounce-x-left {
-  animation: bounce-x-left 0.8s ease-in-out infinite;
+  animation: bounce-x 0.9s ease-in-out infinite;
 }
 
 /* ---- Marquee ---- */
