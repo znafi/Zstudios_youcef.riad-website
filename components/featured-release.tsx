@@ -6,9 +6,9 @@ import { Play, Pause } from 'lucide-react'
 import { Reveal } from './reveal'
 
 const tracks = [
-  { title: 'BINI W BINK', length: '3:12', plays: '2,481,902', src: '/bini-w-bink.mp3' },
-  { title: 'HED LILA', length: '3:27', plays: '1,204,338', src: '/hed-lila.mp3' },
-  { title: 'SARAB', length: '3:54', plays: '987,540', src: '/sarab.mp3' },
+  { title: 'BINI W BINK', length: '3:12', plays: '2,481,902', src: '/bini-w-bink.mp3', startTime: 0 },
+  { title: 'HED LILA',   length: '3:27', plays: '1,204,338', src: '/hed-lila.mp3',    startTime: 40 },
+  { title: 'SARAB',      length: '3:54', plays: '987,540',   src: '/sarab.mp3',        startTime: 30 },
 ]
 
 export function FeaturedRelease() {
@@ -24,9 +24,13 @@ export function FeaturedRelease() {
     if (audioRef.current) {
       audioRef.current.pause()
     }
-    const audio = new Audio(tracks[current].src)
+    const track = tracks[current]
+    const audio = new Audio(track.src)
     audio.addEventListener('ended', () => setCurrent(null))
-    audio.play().catch(() => {})
+    audio.addEventListener('canplay', () => {
+      if (track.startTime > 0) audio.currentTime = track.startTime
+      audio.play().catch(() => {})
+    }, { once: true })
     audioRef.current = audio
 
     return () => {

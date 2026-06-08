@@ -39,10 +39,10 @@ function InstagramIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 const socialLinks = [
-  { label: 'Spotify', href: 'https://open.spotify.com/artist/3UM4e9azTn49QwCW9xYBsV?utm_medium=share&utm_source=linktree', Icon: SpotifyIcon },
-  { label: 'TikTok', href: 'https://www.tiktok.com/@youcef_riad.off', Icon: TikTokIcon },
-  { label: 'Apple Music', href: 'https://music.apple.com/us/artist/youcef-riad/1531264621', Icon: AppleIcon },
-  { label: 'Instagram', href: 'https://www.instagram.com/youcef_riad.off', Icon: InstagramIcon },
+  { label: 'Spotify', href: 'https://open.spotify.com/artist/3UM4e9azTn49QwCW9xYBsV?utm_medium=share&utm_source=linktree', Icon: SpotifyIcon, color: '#1DB954' },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@youcef_riad.off', Icon: TikTokIcon, color: '#ffffff' },
+  { label: 'Apple Music', href: 'https://music.apple.com/us/artist/youcef-riad/1531264621', Icon: AppleIcon, color: '#fc3c44' },
+  { label: 'Instagram', href: 'https://www.instagram.com/youcef_riad.off', Icon: InstagramIcon, color: '#E1306C' },
 ]
 
 export function Hero() {
@@ -89,19 +89,28 @@ export function Hero() {
       <div className="mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-5 md:grid-cols-2 md:gap-8">
         {/* Copy */}
         <div className="order-2 md:order-1">
-          <div className="mt-2 flex items-center gap-5">
-            {socialLinks.map(({ label, href, Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={label}
-                className="text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <Icon className="size-6" />
-              </a>
-            ))}
+          <div className="mt-2 flex items-center gap-3">
+            <span className="flex items-center gap-1 text-xs font-medium text-muted-foreground">
+              Stream now
+              <svg viewBox="0 0 16 16" fill="currentColor" className="size-3.5 animate-bounce-x" aria-hidden="true">
+                <path d="M3 8h8.586L8.293 4.707a1 1 0 0 1 1.414-1.414l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L11.586 9H3a1 1 0 0 1 0-2z"/>
+              </svg>
+            </span>
+            <div className="flex items-center gap-4">
+              {socialLinks.map(({ label, href, Icon, color }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="transition-transform hover:scale-110 active:scale-95"
+                  style={{ color }}
+                >
+                  <Icon className="size-6" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <h1 className="mt-4 text-balance text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
