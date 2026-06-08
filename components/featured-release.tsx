@@ -1,18 +1,51 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Play, Pause } from 'lucide-react'
 import { Reveal } from './reveal'
 
 const tracks = [
-  { title: 'BINI W BINK', length: '3:12', plays: '2,481,902' },
-  { title: 'HED LILA', length: '3:27', plays: '1,204,338' },
-  { title: 'SARAB', length: '3:54', plays: '987,540' },
+  { title: 'BINI W BINK', length: '3:12', plays: '2,481,902', src: '/bini-w-bink.mp3' },
+  { title: 'HED LILA', length: '3:27', plays: '1,204,338', src: '/hed-lila.mp3' },
+  { title: 'SARAB', length: '3:54', plays: '987,540', src: '/sarab.mp3' },
 ]
 
 export function FeaturedRelease() {
-  const [current, setCurrent] = useState<number | null>(0)
+  const [current, setCurrent] = useState<number | null>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+
+  useEffect(() => {
+    // When current changes, swap out the audio source and play
+    if (current === null) {
+      audioRef.current?.pause()
+      return
+    }
+    if (audioRef.current) {
+      audioRef.current.pause()
+    }
+    const audio = new Audio(tracks[current].src)
+    audio.addEventListener('ended', () => setCurrent(null))
+    audio.play().catch(() => {})
+    audioRef.current = audio
+
+    return () => {
+      audio.pause()
+    }
+  }, [current])
+
+  // Pause on unmount
+  useEffect(() => {
+    return () => { audioRef.current?.pause() }
+  }, [])
+
+  function handleTrack(i: number) {
+    if (current === i) {
+      setCurrent(null)
+    } else {
+      setCurrent(i)
+    }
+  }
 
   return (
     <section
@@ -36,7 +69,7 @@ export function FeaturedRelease() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="overflow-hidden rounded-3xl border border-border">
               <Image
-                src="/youcef-riad.jpeg"
+                src="/youcef-riad-hero.png"
                 alt="BINI W BINK cover art by Youcef Riad"
                 width={640}
                 height={800}
@@ -67,7 +100,7 @@ export function FeaturedRelease() {
               return (
                 <li key={track.title}>
                   <button
-                    onClick={() => setCurrent(isPlaying ? null : i)}
+                    onClick={() => handleTrack(i)}
                     className="group flex w-full items-center gap-4 px-4 py-3 text-left transition-colors hover:bg-secondary"
                   >
                     <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground transition-transform group-hover:scale-110">
